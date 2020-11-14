@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-5.1.dtd">
 <!-- eric project file for project Multiplicar -->
-<!-- Saved: 2019-10-20, 10:10:46 -->
-<!-- Copyright (C) 2019 Javier Madrazo, javitum@gmail.com -->
+<!-- Saved: 2020-11-13, 20:23:49 -->
+<!-- Copyright (C) 2020 Javier Madrazo, javitum@gmail.com -->
 <Project version="5.1">
   <Language>en_US</Language>
   <Hash>b220a6c0f54d80ed13ea8d2815192b7cb2dfd9b2</Hash>
@@ -12,6 +12,7 @@
   <Version>1.0</Version>
   <Author>Javier Madrazo</Author>
   <Email>javitum@gmail.com</Email>
+  <TranslationPattern>%language%.ts</TranslationPattern>
   <Eol index="0"/>
   <Sources>
     <Source>Ui_multiplicar.py</Source>
@@ -21,9 +22,116 @@
   <Forms>
     <Form>multiplicar.ui</Form>
   </Forms>
+  <Translations>
+    <Translation>en.qm</Translation>
+    <Translation>en.ts</Translation>
+  </Translations>
+  <Others>
+    <Other>.gitignore</Other>
+  </Others>
   <MainScript>multiplicar.py</MainScript>
   <Vcs>
-    <VcsType>None</VcsType>
+    <VcsType>Git</VcsType>
+    <VcsOptions>
+      <dict>
+        <key>
+          <string>add</string>
+        </key>
+        <value>
+          <list>
+            <string></string>
+          </list>
+        </value>
+        <key>
+          <string>checkout</string>
+        </key>
+        <value>
+          <list>
+            <string></string>
+          </list>
+        </value>
+        <key>
+          <string>commit</string>
+        </key>
+        <value>
+          <list>
+            <string></string>
+          </list>
+        </value>
+        <key>
+          <string>diff</string>
+        </key>
+        <value>
+          <list>
+            <string></string>
+          </list>
+        </value>
+        <key>
+          <string>export</string>
+        </key>
+        <value>
+          <list>
+            <string></string>
+          </list>
+        </value>
+        <key>
+          <string>global</string>
+        </key>
+        <value>
+          <list>
+            <string></string>
+          </list>
+        </value>
+        <key>
+          <string>history</string>
+        </key>
+        <value>
+          <list>
+            <string></string>
+          </list>
+        </value>
+        <key>
+          <string>log</string>
+        </key>
+        <value>
+          <list>
+            <string></string>
+          </list>
+        </value>
+        <key>
+          <string>remove</string>
+        </key>
+        <value>
+          <list>
+            <string></string>
+          </list>
+        </value>
+        <key>
+          <string>status</string>
+        </key>
+        <value>
+          <list>
+            <string></string>
+          </list>
+        </value>
+        <key>
+          <string>tag</string>
+        </key>
+        <value>
+          <list>
+            <string></string>
+          </list>
+        </value>
+        <key>
+          <string>update</string>
+        </key>
+        <value>
+          <list>
+            <string></string>
+          </list>
+        </value>
+      </dict>
+    </VcsOptions>
   </Vcs>
   <FiletypeAssociations>
     <FiletypeAssociation pattern="*.e4p" type="OTHERS"/>

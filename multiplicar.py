@@ -1,6 +1,5 @@
 import sys
 from PyQt5.QtCore import pyqtSlot ,  QSettings
-from PyQt5.QtWidgets import QMainWindow
 from PyQt5 import QtCore ,  QtWidgets , QtMultimedia
 from Ui_multiplicar import *
 from random import randint
@@ -25,11 +24,11 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.textEditllevadas2.setText("")
         self.textEditllevadas3.setText("")
         self.textEditllevadas4.setText("")
-        self.textEditdecenasdemillares.setText("")
-        self.textEditmillares.setText("")
-        self.textEditcentenas.setText("")
-        self.textEditdecenas.setText("")
-        self.textEditunidades.setText("")
+        self.lineEditdecenasdemillares.setText("")
+        self.lineEditmillares.setText("")
+        self.lineEditcentenas.setText("")
+        self.lineEditdecenas.setText("")
+        self.lineEditunidades.setText("")
         self.labelresultado_2.setText("")
         self.labelresultado.setText("")
         self.textEditllevadas1.setEnabled(False)
@@ -101,41 +100,41 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             self.textEditllevadas4.setEnabled(True)
         self.pushButtonGenerar.setEnabled(False)
         self.pushButtonComprobar.setEnabled(True)
-        self.textEditunidades.setFocus()
+        self.lineEditunidades.setFocus()
 
        
     def Comprovar(self):
-        if self.textEditdecenasdemillares.toPlainText()=="":
+        if self.lineEditdecenasdemillares.text()=="":
             decenasdemillares=0
         else:
-            decenasdemillares=int(self.textEditdecenasdemillares.toPlainText())*10000
-        if self.textEditmillares.toPlainText()=="":
+            decenasdemillares=int(self.lineEditdecenasdemillares.text())*10000
+        if self.lineEditmillares.text()=="":
             millares=0
         else:
-            millares=int(self.textEditmillares.toPlainText())*1000            
-        if self.textEditcentenas.toPlainText()=="":
+            millares=int(self.lineEditmillares.text())*1000            
+        if self.lineEditcentenas.text()=="":
             centenas=0
         else:
-            centenas=int(self.textEditcentenas.toPlainText())*100
-        if self.textEditdecenas.toPlainText()=="":
+            centenas=int(self.lineEditcentenas.text())*100
+        if self.lineEditdecenas.text()=="":
             decenas=0
         else:
-            decenas=int(self.textEditdecenas.toPlainText())*10
-        if self.textEditunidades.toPlainText()=="":
+            decenas=int(self.lineEditdecenas.text())*10
+        if self.lineEditunidades.text()=="":
             unidades=0
         else:
-            unidades=int(self.textEditunidades.toPlainText())
+            unidades=int(self.lineEditunidades.text())
         miresultado=decenasdemillares+millares+centenas+decenas+unidades
         multiplicando=int(self.labelmultiplicando.text())
         multiplicador=int(self.labelmultiplicador.text())
         resultado=multiplicando*multiplicador
         self.labelresultado.setText(str(resultado)) 
         if miresultado==resultado:
-          self.labelresultado_2.setText("Bien") 
+          self.labelresultado_2.setText(self.tr("Bien")) 
           bien=int(self.labelbien.text())+1
           self.labelbien.setText(str(bien))
         else:
-          self.labelresultado_2.setText("Mal") 
+          self.labelresultado_2.setText(self.tr("Mal"))
           mal=int(self.labelmal.text())+1
           self.labelmal.setText(str(mal))
         
@@ -156,7 +155,6 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             self.pushButtonGenerar.setEnabled(False)
             self.pushButtonComprobar.setEnabled(False)
             filename = 'Aplausos.mp3'
-            #fullpath = QtCore.QDir.current().absoluteFilePath(filename) 
             media = QtCore.QUrl.fromLocalFile(filename)
             content = QtMultimedia.QMediaContent(media)
             self.player = QtMultimedia.QMediaPlayer()
@@ -168,11 +166,11 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.textEditllevadas2.setText("")
         self.textEditllevadas3.setText("")
         self.textEditllevadas4.setText("")
-        self.textEditdecenasdemillares.setText("")
-        self.textEditmillares.setText("")
-        self.textEditcentenas.setText("")
-        self.textEditdecenas.setText("")
-        self.textEditunidades.setText("")
+        self.lineEditdecenasdemillares.setText("")
+        self.lineEditmillares.setText("")
+        self.lineEditcentenas.setText("")
+        self.lineEditdecenas.setText("")
+        self.lineEditunidades.setText("")
         self.labelresultado_2.setText("")
         self.labelresultado.setText("")
         self.labelejercicios.setText("0")
