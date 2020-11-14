@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-5.1.dtd">
 <!-- eric project file for project Multiplicar -->
-<!-- Saved: 2020-11-13, 20:23:49 -->
+<!-- Saved: 2020-11-14, 17:26:47 -->
 <!-- Copyright (C) 2020 Javier Madrazo, javitum@gmail.com -->
 <Project version="5.1">
   <Language>en_US</Language>
@@ -15,6 +15,7 @@
   <TranslationPattern>%language%.ts</TranslationPattern>
   <Eol index="0"/>
   <Sources>
+    <Source>README.md</Source>
     <Source>Ui_multiplicar.py</Source>
     <Source>__init__.py</Source>
     <Source>multiplicar.py</Source>
